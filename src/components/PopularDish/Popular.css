@@ -1,0 +1,20 @@
+.topdishdiv {
+    width: 100%;
+    padding: 10px 0 30px 0;
+    background-color: var(--secondary-bg);
+}
+
+.container-div {
+    width: 100%;
+}
+
+.title-h1 {
+    color: #522900;
+    font-family: "Delius";
+    font-weight: 900;
+}
+
+.title-p {
+    font-family: 'Delius', cursive;
+    font-weight: 700;
+}

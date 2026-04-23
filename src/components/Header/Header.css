@@ -1,0 +1,151 @@
+:root {
+    --primary-bg: #fff8ef;
+    --link-color: #333;
+    --link-hover: #ff7a00;
+    --btn-bg: #ff7a00;
+    --btn-hover-bg: #333;
+    --btn-hover-color: #fff;
+}
+
+/* 🔷 Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    background-color: var(--primary-bg);
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* 🔷 Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 26px;
+    font-weight: 900;
+    font-family: "Lato", sans-serif;
+    color: rgb(109, 71, 0);
+}
+
+/* 🔷 Navigation Links */
+.navlink {
+    display: flex;
+    gap: 35px;
+}
+
+.navlink a {
+    text-decoration: none;
+    color: var(--link-color);
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* Hover underline */
+.navlink a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--link-hover);
+    transition: 0.3s;
+}
+
+.navlink a:hover {
+    color: var(--link-hover);
+}
+
+.navlink a:hover::after {
+    width: 100%;
+}
+
+/* 🔷 Contact Button */
+.contact a {
+    background-color: var(--btn-bg);
+    padding: 8px 18px;
+    border-radius: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.contact a:hover {
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-color);
+}
+
+/* 🔷 Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    transition: 0.3s;
+}
+
+/* Animation */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+/* 🔷 Mobile View */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    /* Show hamburger */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hide desktop nav */
+    .navlink {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--primary-bg);
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+
+        /* Hidden initially */
+        transform: translateY(-200%);
+        transition: 0.4s ease;
+    }
+
+    /* Show when active */
+    .navlink.open {
+        transform: translateY(0);
+    }
+
+    /* Hide contact button */
+    .contact {
+        display: none;
+    }
+}

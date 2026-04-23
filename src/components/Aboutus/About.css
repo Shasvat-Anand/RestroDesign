@@ -1,0 +1,31 @@
+.aboutus {
+    display: flex;
+    position: relative;
+
+}
+
+.aboutinfo {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    width: 100%;
+    padding-left: 200px;
+    margin: 15px;
+    font-size: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+    backdrop-filter: blur(50px);
+}
+
+.aboutimg {
+    width: 100%;
+    overflow: hidden;
+    /* object-fit: contain; */
+}
