@@ -1,31 +1,49 @@
+/* 🔷 Section with background */
 .aboutus {
-    display: flex;
-    position: relative;
+    width: 100%;
+    min-height: 50vh;
 
-}
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-.aboutinfo {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    text-align: center;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
+    padding: clamp(30px, 6vw, 80px);
 }
 
-.info {
+/* 🔷 Content Box */
+.about-content {
+    max-width: 600px;
     width: 100%;
-    padding-left: 200px;
-    margin: 15px;
+
+    color: #fff;
+    font-size: 17px;
+    line-height: 1.7;
+
+    padding: 25px;
+
+    /* subtle readable background */
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+}
+
+/* 🔷 Social Icons */
+.socialmedia {
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+}
+
+.socialmedia a {
+    color: #fff;
     font-size: 20px;
-    text-align: justify;
-    text-justify: inter-word;
-    backdrop-filter: blur(50px);
+    transition: 0.3s;
 }
 
-.aboutimg {
-    width: 100%;
-    overflow: hidden;
-    /* object-fit: contain; */
+.socialmedia a:hover {
+    color: var(--link-hover);
 }
