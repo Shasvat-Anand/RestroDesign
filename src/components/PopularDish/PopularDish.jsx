@@ -1,104 +1,84 @@
 import img1 from "../../assets/Images/Homemade Margherita Pizza Recipe.jpg";
 import img2 from "../../assets/Images/Soft Gulab Jamuns 🍯✨.jpg";
-import img3 from"../../assets/Images/download (3).jpg";
-import img4 from "../../assets/Images/چکن بریانی.jpg"
+import img3 from "../../assets/Images/download (3).jpg";
+import img4 from "../../assets/Images/چکن بریانی.jpg";
 
-import './Popular.css'
+import './Popular.css';
+
 function PopularDish() {
-    return (
-        <>
-            <div className="topdishdiv " id="Popular">
 
-                <div className="container-div">
-                    <div className="section-title">
-                    <h1 className="title-h1"> 🫰 Popular Dish</h1>
-                    <p className="title-p">Where You Looking for</p>
-                    </div>
+  const items = [
+    {
+      img: img3,
+      name: "Veg Burger",
+      category: "Starter",
+      type: "Veg",
+      price: 99
+    },
+    {
+      img: img2,
+      name: "Gulab Jamuns",
+      category: "Dessert",
+      type: "Veg",
+      price: 99
+    },
+    {
+      img: img4,
+      name: "Chicken Biryani",
+      category: "Main Course",
+      type: "Non-Veg",
+      price: 99
+    },
+    {
+      img: img1,
+      name: "Margherita Pizza",
+      category: "Main Course",
+      type: "Veg",
+      price: 99
+    }
+  ];
 
-                    <div className="card-container grid">
+  return (
+    <section className="topdishdiv" id="Popular">
 
-                        
-                        
-                        <div className="card">
-                            <img src={img3} className="card-img-top" alt="image" />
+      <div className="container-div">
 
-                            <div className="card-body">
-                                <h5 className="card-title">Veg Burger</h5>
+        {/* 🔷 Title */}
+        <div className="section-title">
+          <h1 className="title-h1">🫰 Popular Dish</h1>
+          <p className="title-p">What You’re Looking For</p>
+        </div>
 
-                                <div className="d-flex justify-content-between Cate-type">
-                                    <span className="category">Starter</span>
-                                    <span className="type">Veg</span>
-                                </div>
+        {/* 🔷 Cards */}
+        <div className="card-container">
 
-                                <a href="#" className="btn  w-100 mt-3">
-                                    Price: 99.00
-                                </a>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <img src={img2} className="card-img-top" alt="image" />
+          {items.map((item, index) => (
+            <div className="card" key={index}>
 
-                            <div className="card-body">
-                                <h5 className="card-title">Gulab Jamuns</h5>
+              <img src={item.img} alt={item.name} />
 
-                                <div className="d-flex justify-content-between Cate-type">
-                                    <span className="category">Starter</span> 
-                                    <span className="type">Veg</span>
-                                </div>
+              <div className="card-body">
+                <h5 className="card-title">{item.name}</h5>
 
-                                <a href="#" className="btn w-100 mt-3">
-                                 Price: 99.00
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div className="card">
-                            <img src={img4} className="card-img-top" alt="image" />
-
-                            <div className="card-body">
-                                <h5 className="card-title">Chicken Biryani</h5>
-
-                                <div className="d-flex justify-content-between Cate-type">
-                                    <span className="category">Main Course</span>
-                                    <span className="type">Non-Veg</span>
-                                </div>
-
-                                <a href="#" className="btn w-100 mt-3">
-                                   Price: 99.00
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className="card">
-                            <img src={img1} className="card-img-top" alt="image" />
-
-                            <div className="card-body">
-                                <h5 className="card-title">Margherita Pizza</h5>
-
-                                <div className="d-flex justify-content-between Cate-type">
-                                    <span className="category">Main Course</span>
-                                    <span className="type">Veg</span>
-                                </div>
-
-                                 <a href="#" className="btn w-100 mt-3">
-                                    Price: 99.00 
-                                </a>
-                                
-                                 
-                            </div>
-                        </div>
-
-
-                         
-
-
-                    </div>
-
+                <div className="Cate-type">
+                  <span className="category">{item.category}</span>
+                  <span className="type">{item.type}</span>
                 </div>
-            </div>
 
-        </>
-    )
+                <a className="btn">
+                  Price: ₹{item.price}
+                </a>
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+
+    </section>
+  );
 }
 
-export default PopularDish
+export default PopularDish;
