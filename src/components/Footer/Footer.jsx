@@ -35,7 +35,7 @@ function Footer(){
       </div>
 
       <div className="copyright">
-        <p>© All copyright held by Anand Kr. Agarhari</p>
+        <p>© All copyright hold by Anand Kr. Agarhari</p>
         </div>
 
         </div>

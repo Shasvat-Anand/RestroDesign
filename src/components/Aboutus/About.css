@@ -3,6 +3,7 @@
     width: 100%;
     min-height: 50vh;
 
+    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,14 +15,16 @@
     padding: clamp(30px, 6vw, 80px);
 }
 
+
+
 /* 🔷 Content Box */
 .about-content {
-    max-width: 600px;
+    max-width: 800px;
     width: 100%;
 
     color: #fff;
     font-size: 17px;
-    line-height: 1.7;
+    line-height: 1.5;
 
     padding: 25px;
 

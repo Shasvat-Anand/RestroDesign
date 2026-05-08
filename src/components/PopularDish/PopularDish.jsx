@@ -2,6 +2,7 @@ import img1 from "../../assets/Images/Homemade Margherita Pizza Recipe.jpg";
 import img2 from "../../assets/Images/Soft Gulab Jamuns 🍯✨.jpg";
 import img3 from "../../assets/Images/download (3).jpg";
 import img4 from "../../assets/Images/چکن بریانی.jpg";
+// import popimg from "../../assets/Images/abo.jpg";
 
 import './Popular.css';
 
@@ -39,6 +40,7 @@ function PopularDish() {
   ];
 
   return (
+    // style={{backgroundImage : `url(${popimg})}
     <section className="topdishdiv" id="Popular">
 
       <div className="container-div">

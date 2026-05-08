@@ -1,18 +1,19 @@
 /* 🔷 Section */
 .topdishdiv {
     width: 100%;
-    background-color: var(--secondary-bg);
+    /* background-color: var(--secondary-bg); */
 
-    padding: 40px clamp(15px, 5vw, 80px);  /* 🔥 left-right spacing */
+    background: radial-gradient(#000000, #adef61 , #180000) ;
+     
+    padding: 40px clamp(15px, 5vw, 80px);  
 }
-
-/* 🔷 Container */
+ 
 .container-div {
     max-width: 1200px;
     margin: 0 auto;   /* center content */
 }
 
-/* 🔷 Title */
+ 
 .section-title {
     text-align: center;
     margin-bottom: 30px;
