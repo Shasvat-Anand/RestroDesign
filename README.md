@@ -1,4 +1,4 @@
-# 🍽️ ReStore – Responsive Restaurant Menu Web App
+# 🍽️ Table Tales – Responsive Restaurant Menu Web App
 
 <div align="center">
 
@@ -14,7 +14,7 @@
 
 ## 📌 Overview
 
-**ReStore** is a modern and responsive restaurant menu web application built using **React.js**. It provides a smooth and interactive UI to explore food items across categories like **Starter**, **Popular Dishes**, and **Desserts**.
+**TableTales** is a modern and responsive restaurant menu web application built using **React.js**. It provides a smooth and interactive UI to explore food items across categories like **Starter**, **Popular Dishes**, and **Desserts**.
 
 The project focuses on clean UI design, reusable components, and responsive layout systems to deliver a seamless experience across all devices.
 
